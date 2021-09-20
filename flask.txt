@@ -1,0 +1,45 @@
+
+// CREAR ENTORNO VIRTUAL
+python -m venv env/nombre
+
+// activar
+env\Scripts\activate
+source env/Scripts/activate
+
+// Establecer variable de aplicación
+export FLASK_APP=app/archivo principal #bash
+$env:FLASK_APP = "hello" #powershell
+set FLASK_APP=hello #cmd
+
+// Configurar entorno de desarrollo
+export FLASK_ENV=development
+$env:FLASK_ENV = "hello" #powershell
+set FLASK_ENV=hello #cmd
+
+flask --help
+lista de comando y opciones de la instancia de flask
+
+flask run --help
+Lista de opciones que tiene flask al ejecutar la aplicación
+
+// pip freeze
+Te permite ver todas las dependencias que estan instaladas
+pip freeze >requirements.txt
+
+// instalar paquetes en un nuevo entorno virtual
+pip install -r requirements.txt
+
+// ejecutar migracion
+flask db init
+
+// crea una nueva migracion
+flask db migrate -m "nombre migracion inicial"
+
+// crea una nueva migracion remplazando los cambios anteriores con los nuevos
+flask db migrate command
+
+// remueve una migracion
+flask db downgrade command
+
+// actualizar migracion
+flask db upgrade

@@ -1,0 +1,16 @@
+{% macro mostrar_usuarios(usuarios) %}
+
+{% if usuarios %}
+<div>
+    <h4>Mi lista de usuarios</h4>
+    <ul>
+        {% for usuario in usuarios %}
+            <li>
+                {{ usuario }}
+            </li>
+        {% endfor %}
+    </ul>
+</div>
+{% endif %}
+
+{% endmacro %}
